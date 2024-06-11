@@ -48,6 +48,7 @@ function displaymarks(arry) {
 }
 function visit(i) {
     var url = bookmarksContainer[i].url;
+    url = !url.startsWith('http') ? 'https://' + url : url;
     window.open(url, "_blank");
 }
 
